@@ -60,6 +60,7 @@ section {
 #menu-icon {
   font-size: 3.6rem;
   color: var(--text-color);
+  display: none;
 }
 
 .home {
@@ -73,6 +74,20 @@ section {
   border-radius: 50%;
   border: 1px solid var(--main-color);
   box-shadow: 0 0 5rem var(--main-color);
+}
+.home-img img {
+  animation: floatImage 2.5s ease-in-out infinite;
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .home-content h3 {
   font-size: 3.2rem;
@@ -317,4 +332,111 @@ span {
 }
 .footer-iconTop a:hover {
   box-shadow: 0 0 1rem var(--main-color);
+}
+.header.sticky {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .services {
+    padding-bottom: 7rem;
+  }
+  .portfolio {
+    padding-bottom: 7rem;
+  }
+  .contact {
+    min-height: auto;
+  }
+  footer {
+    padding: 2rem 3%;
+  }
+}
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+  .navBar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1 rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  .navBar.active {
+    display: block;
+  }
+  .navBar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .home {
+    flex-direction: column;
+  }
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .home-img img,
+  .about-img img {
+    width: 50vw;
+    margin-top: 4rem;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .services h2 {
+    margin-bottom: 3rem;
+  }
+  .portfolio h2 {
+    margin-bottom: 3rem;
+  }
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 617px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .contact form .input-box input {
+    width: 100%;
+  }
+}
+@media (max-width: 365px) {
+  .home-img img,
+  .about-img img {
+    width: 90vw;
+  }
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
+  }
 }
