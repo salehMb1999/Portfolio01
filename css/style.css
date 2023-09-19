@@ -210,8 +210,7 @@ span {
 }
 .portfolio-box img {
   width: 100%;
-  transition: .3s all ease-in-out;
-
+  transition: 0.3s all ease-in-out;
 }
 .portfolio-box .portfolio-layer {
   position: absolute;
@@ -227,22 +226,20 @@ span {
   text-align: center;
   padding: 0 4rem;
   transform: translateY(100%);
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 .portfolio-box img:hover {
   transform: scale(1.1);
-
 }
 .portfolio-box:hover .portfolio-layer {
   transform: translateY(0);
-
 }
 .portfolio-layer h4 {
   font-size: 3rem;
 }
 .portfolio-layer p {
   font-size: 1.6rem;
-  margin: .3rem 0 1rem;
+  margin: 0.3rem 0 1rem;
 }
 .portfolio-layer a {
   display: inline-flex;
@@ -256,4 +253,40 @@ span {
 .portfolio-layer a i {
   font-size: 2rem;
   color: var(--second-bg-color);
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+}
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+.contact form .input-box input {
+  width: 49%;
+}
+.contact form textarea {
+  resize: none;
+}
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
 }
